@@ -126,7 +126,7 @@ function validador(event){
     console.log("no acertaste");
     indiceSecuenciaBtnRandom = 0;
     InicioJuego();
-    title.innerText = "Perdiste :( vuelve a intentar!!! "
+    title.innerText = "Perdiste "+puntaje.nombre+ " :( vuelve a intentar!!! ";
 
 
 
@@ -160,20 +160,51 @@ function validador(event){
 
 
 //Script para el modal
-var showModalBtn = document.getElementById('showModalBtn');
-var closeModalBtn = document.getElementById('closeModalBtn');
-var closeModalBtn2 = document.getElementById('closeModalBtn2');
 var modal = document.getElementById('myModal');
-var modalName = document.getElementById('myModalName');
-
-
-showModalBtn.addEventListener('click', () => {
-    modal.style.display = 'flex';
-});
+var historial = document.getElementById('hijo2');
+//var modalName = document.getElementById('myModalName');
+var showHistorial = document.getElementById('showHistorial');
+var closeModalBtn = document.getElementById('closeModalBtn');
+var closeHistorial = document.getElementById('closeHistorial');
 
 closeModalBtn.addEventListener('click', () => {
-    modal.style.display = 'none';
+  modal.style.display = 'none';
 });
+
+
+showHistorial.addEventListener('click', () => {
+  historial.style.display = 'flex';
+  //muestro el storage co el historial de partidas
+  var storage = localStorage.getItem('Puntajes');
+  var arrayStorage = `[${storage}]`
+  var storage = JSON.parse(arrayStorage);
+  //console.log(storage[0].nombre +" " +storage[0].puntos);
+
+  // Obtener el elemento ul por su ID
+  var ul = document.getElementById('miLista');
+
+  // Limpiar la lista antes de agregar nuevos elementos
+  ul.innerHTML = '';
+  
+  // Iterar sobre el array de objetos
+  for (var i = 0; i < storage.length; i++) {
+    // Crear un elemento de lista (li)
+    var li = document.createElement('li');
+
+    // Agregar el contenido del objeto al elemento de lista
+    li.textContent = "Nombre: " + storage[i].nombre + ", Puntos: " + storage[i].puntos;
+
+    // Agregar el elemento de lista a la lista no ordenada
+    ul.appendChild(li);
+  }
+});
+
+
+
+closeHistorial.addEventListener('click', () => {
+  historial.style.display = 'none';
+});
+
 
 
 
@@ -197,7 +228,3 @@ function guardarNombre() {
   console.log(puntaje)
 }
 
-
-// Seccion LocalStorage
-//puntajeString = JSON.stringify(puntaje);
-//console.log(puntajeString);
