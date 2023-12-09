@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div class="padre">
+      <div class="hijo1">
+        <div class="title">
+          <h1 id="title">Presiona Jugar!</h1>
+        </div>
+
+        <div class="contenedorBtn">
+          <button id="red"></button>
+          <button id="green"></button>
+          <button id="blue"></button>
+          <button id="yellow"></button>
+        </div>
+
+
+        <button id="jugar">Jugar!</button>
+
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <h2 id="h2Modal"></h2>
+            <p id="pModal"></p>
+            <button id="closeModalBtn">Cerrar</button>
+          </div>
+        </div>
+
+
+
+        <button id="showModalBtn">Mostrar Modal nombre</button>
+
+        <div id="myModalName" class="modal">
+          <div class="modal-content">
+            <table>
+              <tr>
+                <th>Nombre</th>
+              </tr>
+              <tr>
+                <td><input type="text" name="nombre"></td>
+              </tr>
+            </table>
+            <button id="closeModalBtn2">Cerrar</button>
+          </div>
+        </div>
+      </div>   
+      <div class="hijo2">
+        <p>hijo2</p>
+      </div>
+    </div>
+
+
+    <script src="main.js"></script>
+    </body>
+</html>
