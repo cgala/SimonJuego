@@ -23,6 +23,9 @@ var yellow = document.getElementById('yellow');
 
 var btn = [red, green, blue, yellow];
 
+//storageArray contendra un array de strings que anteriormente eran objetos
+var storageArray = [];
+
 jugar.addEventListener('click', InicioJuego);
 red.addEventListener('click', validador);
 green.addEventListener('click', validador);
@@ -124,6 +127,25 @@ function validador(event){
     indiceSecuenciaBtnRandom = 0;
     InicioJuego();
     title.innerText = "Perdiste :( vuelve a intentar!!! "
+
+
+
+
+
+
+    //ASIGNO EL PUNTAJE OBTENIDO A MI OBJETO PUNTAJES, EL CUAL SE USA PARA EL LOCAL STORAGE
+    puntaje.puntos = contPuntos;
+    //SETEO EL LOCALSTORAGE
+    puntajeString = JSON.stringify(puntaje);
+    storageArray.push(puntajeString)
+    localStorage.setItem('Puntajes', storageArray);
+
+
+
+
+
+
+    //muestro el modal al perder
     modal.style.display = 'flex';
     h2Modal.innerText = "Puntaje: " + contPuntos;
     contPuntos = 0;
@@ -154,4 +176,28 @@ closeModalBtn.addEventListener('click', () => {
 });
 
 
-  
+
+
+
+//objeto para el localStorage
+var puntaje ={
+  nombre : "",
+  puntos: 0
+}
+
+//script para capturar el nombre del formulario
+var nombreGuardado = "";
+function guardarNombre() {
+  var nombre = document.getElementById('nombre');
+  nombreGuardado = nombre.value;
+  console.log("Nombre guardado:", nombreGuardado);
+
+  //LLENO MI OBJETO PUNTAJE CON EL NOMBRE INGRESADO
+  puntaje.nombre=nombreGuardado;
+  console.log(puntaje)
+}
+
+
+// Seccion LocalStorage
+//puntajeString = JSON.stringify(puntaje);
+//console.log(puntajeString);

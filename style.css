@@ -26,13 +26,22 @@ body {
   align-items: center;
   justify-content: center;
 }  
+
+h1{
+  color: black;
+}
+#formularioName label[for="nombre"] {
+  font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
+}
+
+
 .hijo2{
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: rgb(255, 255, 255);
+  background: rgb(249, 198, 255);
   width: 440px;
   height: 440px;
   
@@ -43,13 +52,10 @@ body {
   justify-content: center;
   width: 440px;
   height: 440px;
+  margin-top: 39px;
+  margin-bottom: 15px;
   
   
-}
-
-
-h1{
-  color: black;
 }
 
 
