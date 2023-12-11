@@ -24,46 +24,35 @@
         <div class="title">
           <h1 id="title">Presiona Jugar!</h1>
         </div>
-
         <div class="formName">
           <form id="formularioName">
             <label for="nombre"><b>¿como te llamas?</b></label>
             <input type="text" id="nombre" name="nombre" required>
-
             <button type="button" onclick="registrar(); guardarNombre()">Registrar!</button>
           </form>
         </div>
-
         <div class="contenedorBtn">
-          <button id="red"></button>
-          <button id="green"></button>
-          <button id="blue"></button>
-          <button id="yellow"></button>
+          <button id="rojo"></button>
+          <button id="verde"></button>
+          <button id="azul"></button>
+          <button id="amarillo"></button>
         </div>
-
         <button class="btnJugar" id="jugar">Jugar!</button>
-
-        <div id="myModal" class="modal">
+        <div id="miModal" class="modal">
           <div class="modal-content">
             <h2 id="h2Modal"></h2>
             <p id="pModal"></p>
-            <button id="closeModalBtn">Cerrar</button>
+            <button id="cerrarModalBtn">Cerrar</button>
           </div>
         </div>
-
-        <button class="btnVerHistorial" id="showHistorial">Ver Historial</button>
-        <button class="btnOcultarHistorial" id="closeHistorial">Ocultar Historial</button>
-        
+        <button class="btnVerHistorial" id="verHistorial">Ver Historial</button>
+        <button class="btnOcultarHistorial" id="cerrarHistorial">Ocultar Historial</button> 
       </div>   
-
       <div id="hijo2" class="hijo2">
-        <h2>Historial de partidas</h2>
-        
+        <h2>Historial de partidas</h2>      
         <ul id="miLista"></ul>
       </div>
     </div>
-
-
     <script src="main.js"></script>
     </body>
 </html>

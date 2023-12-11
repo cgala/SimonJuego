@@ -1,97 +1,88 @@
 body {
-    background: #707070;
-    font-family: 'VT323', monospace;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;/*centra todo al centro de los 2 ejes*/
-    justify-content: center;
+  align-items: center;/*centra todo al centro de los 2 ejes*/
+  background: #707070;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-family: 'VT323', monospace;
+  justify-content: center;
     
   }
 header{ 
-  padding: 15px; 
   background-color: rgb(245, 241, 246);
-  width: 90%;   
-  border-radius: 5% 5% 5% 5%; 
+  border-radius: 5% 5% 5% 5%;
+  padding: 15px;
+  width: 90%; 
 }
 .header .menu a{
-    color:#000000;
-    text-decoration: none;
-    margin-right: 25px;
-    font-size: 30px;
+  color: #000000;
+  font-size: 30px;
+  margin-right: 25px;
+  text-decoration: none;
 }
 .header .menu a:hover{
    color: #3fff3f;
 }
-
-
 .padre{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
   align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px; /*espacios entre los hijos*/
+  height: 97%;
   justify-content: center;
   width: 97%;
-  height: 97%;
-  gap :16px; /*espacios entre los hijos*/
 }
 .hijo1{
-
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   align-items: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 45%;
   justify-content: center;
   width: 45%;
-  height: 45%;
 }  
-
 h1{
   color: rgb(245, 241, 246);
 }
-
 #formularioName label[for="nombre"] {
-  font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
   color: rgb(245, 241, 246);
+  font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */  
 }
-
-
 .hijo2{
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
   background: rgb(246, 226, 249);
-  width: 45%;
-  height: 45%;
   border-radius: 15% 15% 15% 15%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 45%;
+  justify-content: center;
+  width: 45%;
 }
 .contenedorBtn{
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  width: 340px;
   height: 340px;
+  justify-content: center;
+  margin-bottom: 10px;
   margin-top: 39px;
-  margin-bottom: 10px;   
+  width: 340px;   
 }
-
 .btnJugar{
-  width: 50%;
   background-color: rgb(196, 169, 202);
   font-weight: bold;
-
+  width: 50%;
 }
 .btnVerHistorial{
-  width: 50%;
   background-color: rgb(196, 169, 202);
   font-weight: bold;
+  width: 50%;
 }
 .btnOcultarHistorial{
-  width: 50%;
   background-color: rgb(196, 169, 202);
   font-weight: bold;
+  width: 50%;
 }
 
 .btnJugar:hover{
@@ -105,141 +96,124 @@ h1{
 }
 
 .active {
-  box-shadow: 0px 0px 20px rgb(255, 247, 0); 
-
-  width: 150px;
-  height: 150px;
-  margin: 3px;
   border-color: rgb(255, 255, 255);
   border-width: 5px;
+  box-shadow: 0px 0px 20px rgb(255, 247, 0);
   cursor: pointer;
+  height: 150px;
+  margin: 3px;
+  width: 150px;
 }
 .activeMouseEnter {
   box-shadow: 0px 0px 20px rgb(255, 255, 255); 
 }
-
-#red {
+#rojo {
   background: red;
+  border-color: rgb(255, 255, 255);
   border-radius: 50% 20% 20% 20%;
-
-  width: 150px;
-  height: 150px;
-  margin: 3px;
-  border-color: rgb(255, 255, 255);
   border-width: 5px;
   cursor: pointer;
+  height: 150px;
+  margin: 3px;
+  width: 150px;
 }
-
-#green {
+#verde {
   background: green;
+  border-color: rgb(255, 255, 255);
   border-radius: 20% 50% 20% 20%;
-
-  width: 150px;
-  height: 150px;
-  margin: 3px;
-  border-color: rgb(255, 255, 255);
   border-width: 5px;
   cursor: pointer;
+  height: 150px;
+  margin: 3px;
+  width: 150px;
 }
-
-#blue {
+#azul {
   background: blue;
+  border-color: rgb(255, 255, 255);
   border-radius: 20% 20% 20% 50%;
-
-  width: 150px;
-  height: 150px;
-  margin: 3px;
-  border-color: rgb(255, 255, 255);
   border-width: 5px;
   cursor: pointer;
+  height: 150px;
+  margin: 3px;
+  width: 150px;
 }
-
-#yellow {
+#amarillo {
   background: yellow;
-  border-radius: 20% 20% 50% 20%;
-
-  width: 150px;
-  height: 150px;
-  margin: 3px;
   border-color: rgb(255, 255, 255);
+  border-radius: 20% 20% 50% 20%;
   border-width: 5px;
   cursor: pointer;
+  height: 150px;
+  margin: 3px;
+  width: 150px;
 }
-
 /* Estilos para el modal */
 .modal {
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
   display: none;
+  height: 100%;
+  justify-content: center;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  align-items: center;
-  justify-content: center;
 }
-
 .modal-content {
   background-color: white;
-  padding: 45px;
   border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 45px;
 }
 .hijo2{
   display: none;
 }
-
 @media screen and (max-width:1368px) {
   header{ 
-    padding: 0px; 
     background-color: rgb(245, 241, 246);
-    width: 95%;   
-    border-radius: 5% 5% 5% 5%; 
+    border-radius: 5% 5% 5% 5%;
+    padding: 0px;
+    width: 95%;
     
   }
   .header .menu a{
-      color:#000000;
-      text-decoration: none;
-      margin-right: 5px;
-      font-size: 20px;
-      margin-left: 2px;
+    color: #000000;
+    font-size: 20px;
+    margin-left: 2px;
+    margin-right: 5px;
+    text-decoration: none;
   }
   .padre{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
     align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px; /*espacios entre los hijos*/
+    height: 97%;
     justify-content: center;
     width: 97%;
-    height: 97%;
-    gap :16px; /*espacios entre los hijos*/
   }
   .hijo1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
     align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 45%;
     justify-content: center;
     width: 45%;
-    height: 45%;
   }  
-  
   #formularioName label[for="nombre"] {
     font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
   }
-  
-  
- 
   .contenedorBtn{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 260px;
     height: 260px;
+    justify-content: center;
     margin-top: 10px;
+    width: 260px;
       
   }
-  
   .btnJugar{
     width: 50%;
   }
@@ -249,59 +223,52 @@ h1{
   .btnOcultarHistorial{
     width: 50%;
   }
-  
   .active {
-    box-shadow: 0px 0px 20px rgb(255, 247, 0); 
-  
-    width: 100px;
-    height: 100px;
-    margin: 3px;
     border-color: rgb(255, 255, 255);
     border-width: 5px;
+    box-shadow: 0px 0px 20px rgb(255, 247, 0);
     cursor: pointer;
+    height: 100px;
+    margin: 3px;
+    width: 100px;
   }
   .activeMouseEnter {
     box-shadow: 0px 0px 20px rgb(255, 255, 255); 
   }
-  
-  #red {
+  #rojo {
     background: red;
+    border-color: rgb(255, 255, 255);
     border-radius: 50% 20% 20% 20%;
-    width: 120px;
-    height: 120px;
-    border-color: rgb(255, 255, 255);
     border-width: 5px;
     cursor: pointer;
+    height: 120px;
+    width: 120px;
   }
-  
-  #green {
+  #verde {
     background: green;
+    border-color: rgb(255, 255, 255);
     border-radius: 20% 50% 20% 20%;
-    width: 120px;
-    height: 120px;
-    border-color: rgb(255, 255, 255);
     border-width: 5px;
     cursor: pointer;
+    height: 120px;
+    width: 120px;
   }
-  
-  #blue {
+  #azul {
     background: blue;
+    border-color: rgb(255, 255, 255);
     border-radius: 20% 20% 20% 50%;
-    width: 120px;
-    height: 120px;
-    border-color: rgb(255, 255, 255);
     border-width: 5px;
     cursor: pointer;
+    height: 120px;
+    width: 120px;
   }
-  
-  #yellow {
+  #amarillo {
     background: yellow;
-    border-radius: 20% 20% 50% 20%;
-    width: 120px;
-    height: 120px;
     border-color: rgb(255, 255, 255);
+    border-radius: 20% 20% 50% 20%;
     border-width: 5px;
     cursor: pointer;
+    height: 120px;
+    width: 120px;
   }
-  
 }

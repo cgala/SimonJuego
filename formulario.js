@@ -1,48 +1,39 @@
-function isValidName(name) {
+function esValidoNombre(nombre) {
     // Validar que el nombre solo contenga letras y números
     var regex = /^[a-zA-Z0-9]+$/;
-    return regex.test(name);
+    return regex.test(nombre);
 }
-
-function isValidEmail(email) {
+function esValidoEmail(email) {
     // Validar formato de correo electrónico
     var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regex.test(email);
 }
-
-function isValidMessage(message) {
+function esValidoMensaje(mensaje) {
     // Validar que el mensaje tenga más de 5 caracteres
-    return message.length > 5;
+    return mensaje.length > 5;
 }
-
-function sendEmail() {
-    var name = document.getElementById('name').value;
+function enviarEmail() {
+    var nombre = document.getElementById('nombre').value;
     var email = document.getElementById('email').value;
-    var message = document.getElementById('message').value;
-
+    var mensaje = document.getElementById('mensaje').value;
     // Validar nombre
-    if (!isValidName(name)) {
+    if (!esValidoNombre(nombre)) {
         alert('Por favor, ingrese un nombre alfanumérico válido.');
         return;
     }
-
     // Validar correo electrónico
-    if (!isValidEmail(email)) {
+    if (!esValidoEmail(email)) {
         alert('Por favor, ingrese un correo electrónico válido.');
         return;
     }
-
     // Validar mensaje
-    if (!isValidMessage(message)) {
+    if (!esValidoMensaje(mensaje)) {
         alert('El mensaje debe tener más de 5 caracteres.');
         return;
     }
-
-    var subject = 'Nuevo mensaje de contacto de ' + name;
-    var body = 'Nombre: ' + name + '\nCorreo electrónico: ' + email + '\n\nMensaje:\n' + message;
-
+    var subject = 'Nuevo mensaje de contacto de ' + nombre;
+    var body = 'Nombre: ' + nombre + '\nCorreo electrónico: ' + email + '\n\nMensaje:\n' + mensaje;
     var mailtoLink = 'mailto:?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
-
     // Abre la herramienta de envío de emails predeterminada del sistema operativo
     window.location.href = mailtoLink;
 }
