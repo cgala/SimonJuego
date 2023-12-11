@@ -47,10 +47,12 @@ header{
 }  
 
 h1{
-  color: black;
+  color: rgb(245, 241, 246);
 }
+
 #formularioName label[for="nombre"] {
   font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
+  color: rgb(245, 241, 246);
 }
 
 
@@ -222,10 +224,6 @@ h1{
     height: 45%;
   }  
   
-  h1{
-    color: black;
-    
-  }
   #formularioName label[for="nombre"] {
     font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
   }
