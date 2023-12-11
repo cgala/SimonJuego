@@ -12,18 +12,24 @@
     <title>Vite App</title>
   </head>
   <body>
+    <header class="header">
+      <nav class="menu">
+          <a href="https://cgala.github.io/SimonJuego/">Juego en Git!</a>
+          <a href="formulario.html">Contacto</a>
+      </nav>
+    </header>
     <div class="padre">
       <div class="hijo1">
         <div class="title">
           <h1 id="title">Presiona Jugar!</h1>
         </div>
 
-        <div class="name">
+        <div class="formName">
           <form id="formularioName">
             <label for="nombre"><b>¿como te llamas?</b></label>
             <input type="text" id="nombre" name="nombre" required>
 
-            <button type="button" onclick="guardarNombre()">Registrar!</button>
+            <button type="button" onclick="registrar(); guardarNombre()">Registrar!</button>
           </form>
         </div>
 
@@ -34,7 +40,6 @@
           <button id="yellow"></button>
         </div>
 
-
         <button id="jugar">Jugar!</button>
 
         <div id="myModal" class="modal">
@@ -44,8 +49,6 @@
             <button id="closeModalBtn">Cerrar</button>
           </div>
         </div>
-
-
 
         <button id="showHistorial">Ver Historial</button>
         <button id="closeHistorial">Ocultar Historial</button>

@@ -10,6 +10,23 @@ body {
     height: 100%;
     
   }
+header{ 
+  padding: 15px; 
+  background-color: rgb(245, 241, 246);
+  width: 90%;   
+  border-radius: 5% 5% 5% 5%; 
+}
+.header .menu a{
+    color:#000000;
+    text-decoration: none;
+    margin-right: 25px;
+    font-size: 30px;
+}
+.header .menu a:hover{
+   color: #3fff3f;
+}
+
+
 .padre{
   display: flex;
   flex-wrap: wrap;

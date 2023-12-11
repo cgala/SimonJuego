@@ -9,9 +9,7 @@ var indiceSecuenciaBtnRandom = 0;
 var intervalID = 0;
 var indice= 0;
 var estado = "";
-
 var contPuntos = 0;
-
 var jugar = document.getElementById('jugar');
 var title = document.getElementById('title');
 var h2Modal = document.getElementById('h2Modal');
@@ -58,7 +56,6 @@ function mouseOut(){
     this.classList.add('activeMouseEnter');
   }
 }
-
 
 function InicioJuego() {
    nivel = 0;
@@ -126,12 +123,7 @@ function validador(event){
     console.log("no acertaste");
     indiceSecuenciaBtnRandom = 0;
     InicioJuego();
-    title.innerText = "Perdiste "+puntaje.nombre+ " :( vuelve a intentar!!! ";
-
-
-
-
-
+    title.innerText = puntaje.nombre + " :( vuelve a intentar!!! ";
 
     //ASIGNO EL PUNTAJE OBTENIDO A MI OBJETO PUNTAJES, EL CUAL SE USA PARA EL LOCAL STORAGE
     puntaje.puntos = contPuntos;
@@ -140,14 +132,11 @@ function validador(event){
     storageArray.push(puntajeString)
     localStorage.setItem('Puntajes', storageArray);
 
-
-
-
-
-
     //muestro el modal al perder
     modal.style.display = 'flex';
-    h2Modal.innerText = "Puntaje: " + contPuntos;
+    var nombre = document.getElementById('nombre');
+    nombreGuardado = nombre.value;
+    h2Modal.innerText = "Jugador/ra: " + nombreGuardado + " \nPuntaje: " + contPuntos;
     contPuntos = 0;
   }
 
@@ -157,7 +146,6 @@ function validador(event){
     nuevoNivel();
   }
 } 
-
 
 //Script para el modal
 var modal = document.getElementById('myModal');
@@ -170,7 +158,6 @@ var closeHistorial = document.getElementById('closeHistorial');
 closeModalBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
-
 
 showHistorial.addEventListener('click', () => {
   historial.style.display = 'flex';
@@ -199,16 +186,9 @@ showHistorial.addEventListener('click', () => {
   }
 });
 
-
-
 closeHistorial.addEventListener('click', () => {
   historial.style.display = 'none';
 });
-
-
-
-
-
 
 //objeto para el localStorage
 var puntaje ={
@@ -228,3 +208,25 @@ function guardarNombre() {
   console.log(puntaje)
 }
 
+//validador del nombre
+function isValidName(name) {
+  // Validar que el nombre solo contenga letras y números
+  var regex = /^[a-zA-Z0-9]+$/;
+  return regex.test(name);
+}
+
+function registrar() {
+  var name = document.getElementById('nombre').value;
+
+  // Validar nombre
+  if (!isValidName(name)) {
+      alert('Por favor, ingrese un nombre alfanumérico válido.');
+      return;
+  }
+  else{
+    modal.style.display = 'flex';
+    var nombre = document.getElementById('nombre');
+    nombreGuardado = nombre.value;
+    h2Modal.innerText = "Click en Jugar! " + nombreGuardado;
+  }
+}
