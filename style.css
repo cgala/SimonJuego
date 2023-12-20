@@ -45,7 +45,7 @@ header{
 h1{
   color: rgb(245, 241, 246);
 }
-#formularioName label[for="nombre"] {
+#formularioNombre label[for="nombre"] {
   color: rgb(245, 241, 246);
   font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */  
 }
@@ -202,7 +202,7 @@ h1{
     justify-content: center;
     width: 45%;
   }  
-  #formularioName label[for="nombre"] {
+  #formularioNombre label[for="nombre"] {
     font-size: 25px; /* Puedes ajustar el tamaño según tus preferencias */
   }
   .contenedorBtn{
