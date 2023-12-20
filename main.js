@@ -36,17 +36,17 @@ verde.addEventListener('mouseout', mouseOut);
 azul.addEventListener('mouseout', mouseOut);
 amarillo.addEventListener('mouseout', mouseOut);
 function mouseEnter(){
-  if (this.classList.contains('activeMouseEnter')){
-    this.classList.remove('activeMouseEnter');
+  if (this.classList.contains('activarMouseEnter')){
+    this.classList.remove('activarMouseEnter');
   }else{
-    this.classList.add('activeMouseEnter');
+    this.classList.add('activarMouseEnter');
   }
 }
 function mouseOut(){
-  if (this.classList.contains('activeMouseEnter')){
-    this.classList.remove('activeMouseEnter');
+  if (this.classList.contains('activarMouseEnter')){
+    this.classList.remove('activarMouseEnter');
   }else{
-    this.classList.add('activeMouseEnter');
+    this.classList.add('activarMouseEnter');
   }
 }
 function InicioJuego() {
